@@ -30,7 +30,9 @@
 		color: $white;
 		cursor: pointer;
 		padding: .5em;
-
+		&.toggled-on {
+			border-bottom: 1px solid;
+		}
 		@include min($bml) {
     	display: none;
 		}
@@ -39,8 +41,8 @@
 
 	.menu {
 		@include max($bml) {
-			max-height: 350px;
-			overflow-y: scroll;
+			max-height: 70vh;
+			overflow-y: auto;
 		}
 	}
 
@@ -60,12 +62,7 @@
 		display: none;
 
 		&.toggled-on {
-			border-top: 1px solid $white;
 			display: inline-block;
-
-			@include min($bml) {
-				border-top: none;
-			}
 		}
 
 		@include min($bml) {
