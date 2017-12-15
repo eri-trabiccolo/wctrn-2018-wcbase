@@ -1,0 +1,329 @@
+/* After Header */
+.widget-title a {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  &:hover {
+    color: $palette-purple-dark;
+  }
+}
+
+#after-header-wrapper {
+  .widget_search {
+    text-align: center;
+
+    #searchform {
+
+      > div {
+        display: inline-block;
+        max-width: 440px;
+        width: 100%;
+
+        @include min($md) {
+          max-width: 680px;
+        }
+
+      }
+
+      &:before {
+        display: none;
+
+        @include min($sm) {
+					background: url('https://2017.torino.wordcamp.org/files/2016/12/search-icon.png') no-repeat right center;
+          background-size: contain;
+          content: '';
+          display: inline-block;
+					height: 28px;
+					vertical-align: middle;
+          width: 28px;
+        }
+
+      }
+
+    }
+
+    input {
+      display: inline-block;
+      font-size: 1em;
+      vertical-align: middle;
+
+      &[type="text"] {
+				margin: 0;
+        max-width: 200px;
+        width: 100%;
+
+        @include min($xs) {
+					margin: 0 .4em;
+          max-width: 300px;
+        }
+
+        @include min($md) {
+          max-width: 540px;
+        }
+
+      }
+
+      &[type="submit"] {
+        @extend %button-light;
+
+				//border-color: $lightest-gray;
+				font-style: italic;
+				letter-spacing: .05em;
+        padding: 6px 18px;
+        text-transform: none;
+				vertical-align: middle;
+
+       // &:hover {
+       //   border-color: darken($lightest-gray, 10%);
+       // }
+
+      }
+
+    }
+  }
+}
+
+
+/* Before Content */
+
+.before-content,
+#after-content {
+  .xoxo {
+
+    li {
+      padding: 1em;
+      vertical-align: top;
+
+      .textwidget {
+        @include min($xs) {
+          font-size: .72em;
+        }
+      }
+
+      .fa {
+        display: block;
+        margin: .2em 0;
+        text-align: center;
+      }
+    }
+
+  }
+
+  .widget-title {
+		font-size: 1.17em;
+    text-align: center;
+  }
+
+}
+
+.before-content {
+  .xoxo {
+
+    @include min($sm) {
+			border-spacing: 1em;
+      display: table;
+      margin: -1em; // align the sides with main container
+    }
+
+    li {
+			color: $white;
+      margin: 1em;
+
+      @include min($sm) {
+        display: table-cell;
+				margin: 0;
+        width: 33.33%;
+      }
+
+      &:nth-child(odd) {
+        background-color: $blue;
+      }
+
+      &:nth-child(even) {
+        background-color: $lightest-blue;
+				color: $dark-gray;
+
+				h3 {
+					color: $dark-gray;
+				}
+      }
+
+			.widget-title {
+				color: $white;
+			}
+
+      .textwidget {
+        @include min($md) {
+          font-size: .85em;
+					line-height: 1.8;
+        }
+      }
+
+      .fa {
+        font-size: 4em;
+
+        @include min($lg) {
+          font-size: 6em;
+        }
+
+      }
+
+    }
+  }
+}
+
+/* After Content */
+
+#after-content {
+
+  .xoxo {
+    text-align: center;
+
+    @include min($md) {
+			border-spacing: 1em;
+      display: table;
+      margin: -1em; // align the sides with main container
+    }
+
+    li {
+			background-color: $lightest-gray;
+      margin: 1em;
+
+      @include min($sm) {
+        display: inline-block;
+				margin: 0 0 1em 0;
+        width: 42%;
+      }
+
+      &:nth-child(odd) {
+        @include min($sm) {
+          margin-right: 1em;
+        }
+
+        @include min($md) {
+          margin-right: 0;
+        }
+      }
+
+      @include min($md) {
+        display: table-cell;
+				margin: 0;
+        width: 25%;
+      }
+
+      .textwidget {
+        font: 1em/2 $sans-serif;
+
+        @include min($xs) {
+          font-size: .8em;
+        }
+      }
+
+      .fa {
+        font-size: 3em;
+
+        @include min($lg) {
+          font-size: 4em;
+        }
+      }
+
+      .button--gold,
+			.button--blue {
+        @include min($xs) {
+          font-size: .78em !important;
+        }
+      }
+    }
+  }
+
+  .jetpack_subscription_widget {
+
+    p {
+      font: 1em/2 $sans-serif;
+
+      @include min($xs) {
+        font-size: .8em;
+      }
+    }
+
+    input {
+      &[type="submit"] {
+        @extend .button--gold--small;
+
+        line-height: 1.8;
+      }
+    }
+
+  }
+
+}
+
+
+/* Before Footer (Sponsors) */
+
+#before-footer {
+  .wcb_widget_sponsors {
+
+    .sponsor-level {
+      @include container;
+
+      margin-bottom: 1em;
+    }
+
+    .sponsor-level-title {
+      color: $white;
+      font-family: $serif;
+      font-style: italic;
+      margin-bottom: .5em;
+    }
+
+    .sponsor-logo {
+      display: inline-block !important;
+      vertical-align: middle;
+      border-bottom-width: 0;
+
+      @include span(12);
+
+      @include min($md) {
+        @include span(2);
+      }
+
+      &:nth-child(6n) {
+        @include min($md) {
+          @include span(2 last);
+        }
+      }
+
+    }
+
+  }
+}
+
+/* Content Sidebar */
+
+#content-row-1 {
+
+  font: 1em/2 $sans-serif;
+
+  @include min($xs) {
+    font-size: .72em;
+  }
+
+  .xoxo {
+    > li {
+      background: $body-bg;
+      margin: 1em;
+      padding: 1.36em;
+
+      @include min($sm) {
+        margin: 0 0 2em;
+      }
+    }
+  }
+
+	.widget-container {
+		border-top: 5px solid $palette-blue;
+	}
+
+}

@@ -1,0 +1,193 @@
+%button-base {
+	background: transparent;
+	border: 2px solid;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $sans-serif;
+	font-weight: 600;
+	padding: .3em .8em;
+  position: relative;
+
+  &:focus {
+		left: 2px;
+    top: 2px;
+  }
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-bottom: 2px solid;
+	}
+
+}
+
+%button {
+  @extend %button-base;
+
+	border-color: $palette-purple-dark;
+  color: $palette-purple-dark;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: $palette-purple-dark;
+		color: $white;
+  }
+
+}
+
+%button-light {
+  @extend %button-base;
+
+  border-color: $palette-purple-dark;
+	color: $palette-purple-dark;
+
+	&:hover,
+	&:focus,
+	&:active {
+    background: $palette-purple-dark;
+		color: $white;
+  }
+
+}
+
+%button-gold {
+  @extend %button-base;
+
+	background: $light-gold;
+	border-color: $light-gold;
+	color: $white;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: $white;
+		border-color: $light-gold;
+	  color: $light-gold;
+  }
+
+}
+
+%button-featured {
+  @extend %button-base;
+
+	border-color: $featured;
+	background: $featured;
+  color: darken($dark-gray, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: transparent;
+		border-color: $white;
+		color: $white;
+  }
+
+}
+
+%button-dark {
+	@extend %button-base;
+
+	border-color: $dark-gray;
+	color: $dark-gray;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: $dark-gray;
+		color: $white;
+	}
+}
+
+%button-white {
+	@extend %button-base;
+
+	border-color: $white;
+	color: $white;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: $white;
+		color: $dark-gray;
+	}
+}
+
+%button-blue {
+
+	@extend %button-base;
+
+	background: $palette-purple-dark;
+	border-color: $palette-purple-dark;
+	color: $white;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: lighten( $palette-purple-dark, 20% );
+		border-color: $palette-purple-dark;
+  }
+
+}
+
+%button-small {
+  letter-spacing: .07em;
+  text-transform: uppercase;
+
+  @include min($xs) {
+    font-size: .72em;
+  }
+
+}
+
+.button--gold {
+  @extend %button-gold;
+
+  &--small {
+    @extend %button-gold;
+    @extend %button-small;
+  }
+
+}
+
+.button--white {
+  @extend %button-white;
+
+  &--small {
+    @extend %button-white;
+    @extend %button-small;
+  }
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-bottom-color: $white;
+	}
+
+}
+
+.button--dark {
+  @extend %button-dark;
+
+  &--small {
+    @extend %button-dark;
+    @extend %button-small;
+  }
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-bottom-color: $dark-gray;
+	}
+
+}
+
+.button--blue {
+  @extend %button-blue;
+
+  &--small {
+    @extend %button-blue;
+    @extend %button-small;
+  }
+
+}

@@ -1,0 +1,128 @@
+#header-container {
+	background: $palette-blue url('https://2018.torino.wordcamp.org/files/2017/12/torino-wordcamp-wordpress-bw.jpg');
+  background-position: top center;
+  background-size: cover !important;
+  border-bottom: 5px solid $palette-blue;
+	color: $white;
+	display: table;
+	height: 360px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparentize( $white,0.5);
+  }
+
+  #header {
+		background: transparentize($palette-purple-light, .4);
+    display: table-cell;
+		height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+
+		#masthead {
+			padding-top: 7em;
+
+			@include min($xs) {
+				padding-top: 5em;
+			}
+
+			@include min($bml) {
+				padding-top: 3em;
+			}
+		}
+
+  }
+
+}
+
+#return-to-central {
+  display: none;
+}
+
+#branding {
+  position: relative;
+  z-index: 2;
+}
+#site-description {
+  color: $palette-purple-dark;
+  font-family: $sans-serif;
+  font-size: 1.2em;
+  letter-spacing: .11em;
+}
+
+#site-title {
+  display: block;
+  font-size: 2.4em;
+
+  span {
+    display: block;
+  }
+
+  a {
+    color: transparent;
+    display: inline-block;
+    border: none;
+  }
+
+  color: $white;
+  font-family: $sans-serif;
+  font-size: 1em;
+  letter-spacing: .11em;
+
+  @include min($xs) {
+    font-size: .8em;
+  }
+
+  span,
+  span a:before {
+    height: 200px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  span a:before {
+		background-image: url('https://2018.torino.wordcamp.org/files/2017/12/LOGO-WCTRN2018.png');
+    background-size: cover;
+    content: '';
+    display: block;
+
+		//@include retina($xs) {
+		//	background-image: url('https://2018.torino.wordcamp.org/files/2017/12/LOGO-WCTRN2018-retina.png');
+	  //  background-size: cover;
+		//}
+  }
+
+}
+
+/* Front-Page Specific Styles */
+
+body.home {
+
+  #header-container {
+    @include min($xs) {
+      height: 600px;
+    }
+  }
+
+  #site-title {
+    span,
+    span a:before {
+      @include min($xs) {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+.wcorg-session,
+.wcb_session,
+.wcb_sponsor,
+.wcb_speaker {
+  margin: 2em 0 3em;
+
+  .entry-title, h2 {
+    text-align: center;
+
+    img {
+			height: auto;
+      width: auto;
+    }
+  }
+
+}
+
+.entry-meta {
+  &.session-speakers {
+    display: none;
+  }
+}
+
+h2.session-speakers,
+h2.speaker-sessions {
+  text-align: center;
+}
+
+#session-speaker-names,
+#speaker-session-names {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.wcpt-session-meta {
+	font-style: italic;
+	text-align: center;
+}
+
+.single-wcb_session,
+.wcorg-sessions {
+	.button--blue {
+		color: #fff;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $blue;
+		}
+	}
+}

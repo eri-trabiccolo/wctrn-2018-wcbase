@@ -1,0 +1,223 @@
+%accent-font {
+  font: bold .72em $sans-serif;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+%track-name {
+	color: $blue;
+  display: block;
+	font: normal .88em $sans-serif;
+  margin: 0 0 .5em 0;
+
+  @include min($sm) {
+    display: none;
+  }
+
+}
+
+.page-slug-schedule {
+  .entry-content {
+    h1 {
+      font-size: 1.6em;
+      text-align: center;
+
+      @include min($sm) {
+        font-size: 2em;
+        text-align: left;
+      }
+
+    }
+  }
+}
+
+.wcpt-schedule,
+.tix_tickets_table {
+  margin: .5em auto 2em;
+  width: 90%;
+
+  @include min($xs) {
+    width: 96%;
+  }
+
+  @include min($sm) {
+    width: auto;
+  }
+
+  @include min($md) {
+    margin: .5em -10% 2em;
+  }
+
+  thead {
+    @extend %accent-font;
+
+    display: none;
+
+    @include min($sm) {
+			background-color: $blue;
+      border-right: 1px solid $blue;
+      border-left: 1px solid $blue;
+			color: $white;
+      display: table-header-group;
+      text-align: left;
+    }
+
+  }
+
+  tbody {
+
+    tr {
+			border: 0;
+      border-bottom: 1px solid lighten($lightest-blue, 7.5%);
+      display: block;
+      margin: 0;
+
+      @include min($sm) {
+        display: table-row;
+      }
+
+      &:nth-child(even) {
+        background-color: lighten($lightest-blue, 13.5%);
+      }
+
+    }
+
+    td {
+      @include min($sm) {
+        border-right: 1px solid lighten($lightest-blue, 7.5%);
+      }
+
+      &:first-child {
+        @include min($sm) {
+          border-left: 1px solid lighten($lightest-blue, 7.5%);
+        }
+      }
+
+      &:nth-child(2) {
+        .wcpt-session-speakers {
+          &:after {
+            @extend %track-name;
+            content: 'Track A';
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .wcpt-session-speakers {
+          &:after {
+            @extend %track-name;
+            content: 'Track B';
+          }
+        }
+      }
+
+    }
+
+  }
+
+  th, td {
+    display: block;
+    padding: .8em;
+
+    @include min($sm) {
+      display: table-cell;
+      padding: .5em .8em;
+    }
+
+  }
+
+  .wcpt-time {
+    @extend %accent-font;
+
+		background-color: $blue;
+    color: $white;
+
+    @include min($sm) {
+      background-color: transparent;
+			color: $text-color;
+			width: 15%;
+    }
+
+  }
+
+  .wcpt-session-type-session,
+	.global-session {
+		border-left: 1px solid lighten($lightest-blue, 7.5%);
+		border-right: 1px solid lighten($lightest-blue, 7.5%);
+		line-height: 2;
+		margin: 0;
+    max-width: 100%;
+    width: 100%;
+
+    @include min($sm) {
+      width: 42.5%;
+    }
+
+  }
+
+  .wcpt-session-empty {
+    display: none;
+
+    @include min($sm) {
+      display: table-cell;
+    }
+  }
+
+  .wcpt-session-speakers {
+    display: block;
+    font-style: italic;
+
+    a {
+			border: 0;
+      color: $text-color;
+
+      &:hover,
+			&:focus {
+      color: lighten($text-color, 15%);
+    	}
+
+    }
+
+  }
+
+  .wcpt-session-title {
+    display: inline;
+    padding: 0;
+  }
+}
+
+.page-slug-schedule-contributor-day .wcpt-schedule tbody td:nth-child(2) .wcpt-session-speakers:after, .tix_tickets_table tbody td:nth-child(2) .wcpt-session-speakers:after {
+  @media screen and (max-width:1080px) {
+    display: none;
+  }
+}
+
+.page-slug-schedule-contributor-day span.wcpt-session-speakers {
+  @media screen and (max-width:1080px) {
+    padding-left: 0;
+  }
+}
+
+.wcpt-session-type-session {
+  &:before {
+    display: none;
+  }
+}
+
+/* Double-length speech fix. */
+td.wcpt-session-empty:last-child {
+    background-color: #fff;
+    padding: 0;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+    }
+}

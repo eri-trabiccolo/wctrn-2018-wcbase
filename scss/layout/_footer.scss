@@ -1,0 +1,65 @@
+#before-footer-wrapper {
+	background-color: $palette-purple-light;
+  //border-top: 5px solid $palette-purple-dark;
+	color: $white;
+	font: 1em/2 $sans-serif;
+  padding: 1em;
+
+  @include min($xs) {
+		font-size: .72em;
+    padding: 1em 3em;
+  }
+
+  @include min($sm) {
+    padding: 1em 0;
+  }
+
+  a {
+		border-bottom-color: $white;
+    color: $white;
+
+    &:hover, &:focus {
+      border-bottom-color: lighten( $palette-purple-dark, 15%);
+    }
+
+  }
+
+  .xoxo {
+    > li {
+      margin-bottom: 2em;
+
+      @include span(12);
+    }
+  }
+
+  .widget-title {
+    color: $white;
+    font-size: 1.75em;
+  }
+
+}
+
+#footer-wrapper {
+	background: $palette-purple-dark;
+  font: .72em/2 $sans-serif;
+  text-align: center;
+
+  a {
+		border: 0;
+		color: $white;
+    display: inline-block;
+    padding: 0 .5em;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+#site-info,
+#site-generator {
+  display: inline-block;
+  margin: .5em 1em;
+}

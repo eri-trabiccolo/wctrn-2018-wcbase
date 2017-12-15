@@ -1,0 +1,71 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: $palette_gray;
+  color: $text-color;
+  font: $font-size-xs $serif;
+  line-height: 1.8;
+
+  @include retina($xs) {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @include min($xs) {
+    font-size: $font-size;
+  }
+
+  &.admin-bar {
+    #main-menu-wrapper {
+      top: 46px;
+
+      @include min($sm) {
+        top: 32px;
+      }
+
+    }
+  }
+
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+		border-bottom: 1px solid $link-color;
+    color: $link-color-hover; //darken($link-color, 10%);
+  }
+
+}
+
+.entry-content a {
+
+	border-bottom: 1px solid $link-color;
+	color: $link-color;
+
+  &:hover, &:focus {
+		border-bottom-color: $link-color-hover;
+    color: $link-color-hover;
+  }
+}
+
+img {
+	height: auto;
+  max-width: 100%;
+}
+
+#wp-calendar {
+  width: 100%;
+}
+
+/* Style for Italian/English divider */
+h3.divider {
+	background: $palette-blue;
+	color: $white;
+	padding: .25em 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

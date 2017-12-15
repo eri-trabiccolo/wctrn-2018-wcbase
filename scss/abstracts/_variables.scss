@@ -1,0 +1,57 @@
+/* Susy */
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  container: 1180px,
+  global-box-sizing: border-box,
+);
+
+/* Fonts */
+$sans-serif: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+$serif: 'Rubik', 'Georgia', sans-serif;
+
+$font-size: 21px;
+$font-size-xs:  16px;
+
+/* Breakpoints */
+$xxs:	415px;
+$xs:	520px;
+$sm:	768px;
+$md:	992px;
+$bml: 1080px;
+$lg:	1260px;
+$xlg:	1450px;
+
+/* Colors */
+$white:						#fff;
+$lightest-gray:		#d6d6d6;
+$light-gray:			#a7a7a7;
+$gray:						#514c4c;
+$dark-gray:				#464342;
+$black:						#000;
+
+$lightest-blue:		#9ac6d3;
+$light-blue:			#4394a8;
+$blue:						#00697f;
+$dark-blue:				#004d5d;
+
+
+$lightest-gold:	#d6cc96;
+$light-gold:		#d6c568;
+$gold:					#d6c152;
+
+$palette-purple-dark : #805199;
+$palette-purple-light : #b398c3;
+$palette-blue : #66BFEB;
+$palette-gray : #e5e5e5;
+
+$body-bg:			$white;
+$text-color:	$dark-gray;
+
+
+$link-color:	$palette-purple-dark;
+$link-color-hover: $palette-purple-light;
+$featured: 		$palette-blue;
+
+/* Other */
+$border-radius:	6px;

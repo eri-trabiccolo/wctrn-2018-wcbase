@@ -1,0 +1,13 @@
+{
+  "name": "wctrn-2018-wcbase",
+  "version": "0.0.1",
+  "description": "Custom CSS for WordCamp Torino 2017 theme",
+  "license": "GPL3",
+  "devDependencies": {
+    "grunt": "~1.0.0",
+    "grunt-contrib-sass": "latest",
+    "grunt-postcss": "latest",
+    "autoprefixer": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

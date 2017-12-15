@@ -1,0 +1,34 @@
+.wcorg-sponsors h2,
+.sponsor__title {
+	border-bottom: 2px solid;
+	font: bold italic 1.81em/1 $serif;
+  margin: 1.2em 0 .5em;
+}
+
+.wcorg-sponsor-level-gold h2,
+.sponsor__title--gold {
+	border-color: #DAA520;
+  color: #DAA520;
+}
+
+.wcorg-sponsor-level-silver h2,
+.sponsor__title--silver {
+	border-color: #778899;
+	color: #778899;
+}
+
+.wcorg-sponsor-level-bronze h2,
+.sponsor__title--bronze {
+	border-color: #D2691E;
+  color: #D2691E;
+}
+
+.wcorg-sponsors h3 {
+	a {
+		border-bottom: none;
+	}
+}
+
+.wcorg-sponsor-description > a {
+	border-bottom: none;
+}

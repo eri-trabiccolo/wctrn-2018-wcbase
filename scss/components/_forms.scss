@@ -1,0 +1,61 @@
+%form {
+	border: 2px solid $palette-blue;
+	color: $text-color;
+	font-family: $serif;
+  font-size: 1em;
+  padding: .3em .8em;
+
+  &:focus {
+		border-color: $palette-purple-dark;
+    outline: none;
+  }
+
+}
+
+input {
+  @extend %form;
+
+  &[type="submit"] {
+    @extend %button-blue;
+  }
+
+}
+
+textarea, select {
+  @extend %form;
+}
+
+/* Jetpack Form */
+.contact-form {
+
+	label {
+		span {
+			color: $gray !important;
+		}
+	}
+
+	textarea {
+    max-width: 600px;
+    width: 100% !important;
+  }
+
+  > div {
+    input, select {
+      max-width: 600px !important;
+      width: 100% !important;
+    }
+
+		input[type="radio"] {
+			margin-right: 10px;
+			width: 16px !important;
+		}
+
+		.grunion-radio-label {
+			font-size: 1em;
+			font-weight: 400 !important;
+			padding-left: 10px;
+		}
+
+  }
+
+}

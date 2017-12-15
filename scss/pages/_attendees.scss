@@ -1,0 +1,59 @@
+#tix-attendees {
+
+  .tix-attendee-list {
+		list-style-type: none !important;
+    text-align: center;
+
+    li {
+      height: auto !important;
+      margin-bottom: 1em;
+			min-height: 210px;
+			width: 100%;
+
+			@include min($xs) {
+				margin-bottom: 2em;
+        width: 50%;
+      }
+
+      @include min($sm) {
+        width: 33.33%;
+      }
+
+    }
+
+  }
+
+  .avatar {
+		border: 2px solid $lightest-blue;
+    border-radius: 50%;
+    display: block;
+    float: none;
+		height: 96px !important;
+    margin: 0 auto .5em;
+    pointer-events: none;
+    width: 96px !important;
+  }
+
+  .tix-field {
+    display: block;
+    margin: 0;
+
+    &.tix-attendee-name {
+      font-size: 1em;
+    }
+
+    &.tix-attendee-twitter,
+		&.tix-attendee-url {
+			border: 0;
+      text-decoration: underline;
+      text-decoration-color: lighten($palette-blue, 30%);
+
+      &:after {
+        content: ' ' ;
+        display: block;
+      }
+    }
+
+  }
+
+}
